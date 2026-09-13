@@ -1,205 +1,69 @@
-# Kernel-MCIR: Anonymous Code Repository
+# Kernel-MCIR — Anonymous Reproducibility Artifact
 
-## Overview
+This repository is the **clean reference implementation for the revised Kernel-MCIR formulation** used in the anonymous manuscript. It is intentionally separated from exploratory development notebooks that contained superseded definitions.
 
-This repository contains the implementation of **Kernel-MCIR**, a redundancy-aware nonlinear feature attribution method based on incremental geometric projections in Reproducing Kernel Hilbert Spaces (RKHS).
+## What this repository implements
 
-Kernel-MCIR quantifies feature importance by separating:
+The code follows the revised mathematical definition:
 
-* **Unique contribution** (new explanatory structure introduced by a feature)
-* **Redundant contribution** (overlap with already explained structure)
+- exact Frobenius-space orthogonal projection onto spans of centered Gram matrices;
+- signed alignments `u_i` and `r_i`;
+- magnitude strengths `U_i = |u_i|` and `R_i = |r_i|`;
+- the order-conditioned novelty ratio `s_i = U_i/(U_i+R_i)` when the denominator is positive;
+- the extended aggregation convention `tilde{s}_i = 0` for an uninformative zero-strength context;
+- uniform feature-order permutation averaging;
+- `bar U`, `bar R`, `bar T`, and the optional activity-gated score;
+- exact duplicate symmetry under uniform permutation averaging;
+- exact-kernel and Random Fourier Feature (RFF) utilities.
 
-This geometric formulation enables **stable, interpretable, and noise-robust feature attribution** across diverse data regimes.
+The reference projector uses a **rank-revealing SVD**. It does not use `max(u,0)`, ReLU clipping, or an all-other-features conditioning set.
 
----
-
-## Key Features
-
-* Redundancy-aware feature attribution
-* Nonlinear modeling via kernel methods
-* Stable rankings under noise and correlation
-* No reliance on perturbation or density estimation
-* Scalable using Random Fourier Features (RFF)
-* GPU-enabled implementation for large-scale experiments
-
----
-
-## Repository Structure
-
-```
-.
-├── kernel_mcIR/                 # Core implementation
-│   ├── kernel_utils.py         # Kernel computations (RBF, centering, RFF)
-│   ├── projection.py           # RKHS projection operators
-│   ├── attribution.py          # Kernel-MCIR computation (U, R, score)
-│   └── metrics.py              # Evaluation metrics (Spearman, AUC)
-│
-├── experiments/
-│   ├── synthetic.py            # Controlled redundancy experiments
-│   ├── uci_air_quality.py      # Tabular dataset experiments
-│   ├── wind_power.py           # Time-series experiments
-│   ├── mnist_embeddings.py     # High-dimensional embedding experiments
-│
-├── models/
-│   ├── mlp.py                  # Neural network model
-│   ├── xgboost_model.py        # Tree-based model
-│
-├── notebooks/
-│   └── kernelmcirextended.ipynb  # Full benchmarking notebook (main file)
-│
-├── configs/
-│   └── default.yaml            # Experiment configurations
-│
-├── requirements.txt
-├── run_experiment.py
-└── README.md
-```
-
----
-
-## Installation
+## Quick start
 
 ```bash
-git clone <anonymous-repo-link>
-cd kernel-mcir
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -e .
+pip install pytest
+pytest -q
 ```
 
----
-
-## Quick Start (Recommended)
-
-Run the full experimental pipeline directly:
+Run all revised controlled diagnostics:
 
 ```bash
-jupyter notebook notebooks/kernelmcirextended.ipynb
+python experiments/run_all.py
 ```
 
-This notebook includes:
+Outputs are written to `results/` and are deliberately git-ignored so each user regenerates them from code.
 
-## Datasets
-
-The experiments cover a diverse set of datasets across synthetic, tabular, temporal, and deep representation settings:
-
-### Real-world datasets
-* UCI Air Quality dataset (tabular)
-* Gas Sensor dataset (UCI / public repository)
-* Wind power time-series (Norway, Open Power System Data / Renewables.ninja; programmatically downloaded)
-* Fashion-MNIST (raw images and learned embeddings)
-
-### Synthetic datasets
-* Swiss Roll dataset (nonlinear manifold)
-* Nonlinear interaction datasets (controlled feature dependencies)
-* Large-scale synthetic datasets (up to 50k samples)
-
-### Derived representations
-* Deep embeddings extracted from CNN models
-* Kernel representations (RBF and Random Fourier Features)
-
-### Robustness settings
-* Gaussian noise perturbations
-* Adversarial noise perturbations
-
-All datasets are publicly available or generated using standard libraries. Preprocessing, feature engineering (including lag, rolling, and calendar features for temporal data), and generation pipelines are fully included in the repository.
-* Baseline comparisons:
-
-  * HSIC
-  * CKA
-  * Mutual Information
-  * Integrated Gradients
-* Noise robustness experiments (Gaussian + adversarial)
-
----
-
-## Usage
-
-### Run a standard experiment
+## Individual diagnostics
 
 ```bash
-python run_experiment.py --dataset uci_air_quality
+python experiments/context_dependence.py
+python experiments/duplicate_symmetry.py
+python experiments/controlled_order.py --reference-orders 1000
+python experiments/rff_sensitivity.py --n 240 --orders 100
 ```
 
-### Compute Kernel-MCIR attribution
+`controlled_order.py` reuses one deterministic stream of uniformly sampled feature orders when comparing different values of `B`. `duplicate_symmetry.py` uses exhaustive permutation averaging on a five-feature controlled problem.
 
-```python
-from kernel_mcIR.attribution import compute_kmcir
+## Repository scope and archived manuscript results
 
-scores = compute_kmcir(X, y)
-```
+The manuscript clearly distinguishes **archived core benchmark values** from experiments introduced for the revised symmetrized formulation. This cleaned artifact is the reference implementation for the revised formulation and reproduces the controlled mathematical/algorithmic diagnostics included with that revision.
 
----
+Some archived UCI/Wind/Fashion-MNIST benchmark values predate this cleaned artifact. They are retained in the manuscript only as archived fixed-protocol results and are not used as evidence for the revised permutation-symmetrized estimator. This repository does not claim to recreate those unavailable historical pipelines.
 
-## Method Summary
+## Anonymity
 
-Kernel-MCIR evaluates feature importance through **incremental RKHS projections**:
+This artifact contains no author names, institutional affiliations, personal repository URLs, Google Drive identifiers, or acknowledgements. Please keep the review repository anonymous until the double-blind period ends.
 
-* Let Φ be the conditioning set
-* Add feature ( f_i )
-* Measure projection change ( \Delta_i )
+## Numerical conventions
 
-Compute:
+The theoretical score `s_i(Phi)` is undefined when `U_i + R_i = 0`. For permutation aggregation only, the manuscript defines an extended score `tilde{s}_i(Phi)=0` in that uninformative case. The implementation follows this convention using `strength_tol` to identify numerical zero.
 
-* Unique influence: alignment with new structure
-* Redundant influence: alignment with existing structure
+For exact duplicate/near-collinear kernels, rank is determined by SVD with relative tolerance `rank_tol`.
 
-Final score:
+## Reproducibility map
 
-[
-\text{K-MCIR}(i \mid \Phi) =
-\frac{U(i \mid \Phi)}{U(i \mid \Phi) + R(i \mid \Phi)}
-]
-
----
-
-## Datasets
-
-All datasets used are publicly available:
-
-* UCI Air Quality (tabular)
-* Fashion-MNIST (deep embeddings)
-* Swiss Roll synthetic dataset
-* Wind power time-series (derived from public sources)
-* Synthetic nonlinear interaction datasets
-
-All preprocessing pipelines are included in the repository.
-
----
-
-## Reproducibility
-
-* Fixed random seeds across experiments
-* Standard train/validation/test splits (70/15/15)
-* Results averaged over multiple runs
-* GPU and CPU implementations provided
-* All experiment pipelines included in the notebook
-
----
-
-## Notes for Reviewers
-
-* This repository is anonymized for double-blind review
-* No identifying information is included
-* All code is self-contained and executable
-* Notebook reproduces all key results in the paper
-* Baseline comparisons are implemented consistently
-
----
-
-## Limitations
-
-* Kernel bandwidth selection may affect performance
-* RFF approximation introduces variance at low dimensions
-* Computational cost increases with feature dimensionality (without RFF)
-
----
-
-## License
-
-This repository is provided for academic review purposes.
-A formal license will be added upon publication.
-
----
-
-## Contact
-
-Anonymous submission — contact information will be provided after review.
+See `docs/MANUSCRIPT_MAPPING.md` for the correspondence between manuscript claims and scripts, and `docs/REPRODUCIBILITY.md` for seeds, dependencies, and expected outputs.
