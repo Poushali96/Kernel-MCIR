@@ -4,7 +4,7 @@ This repository is the **clean reference implementation for the revised Kernel-M
 
 ## What this repository implements
 
-The code follows the revised mathematical definition:
+The code follows the mathematical definition:
 
 - exact Frobenius-space orthogonal projection onto spans of centered Gram matrices;
 - signed alignments `u_i` and `r_i`;
