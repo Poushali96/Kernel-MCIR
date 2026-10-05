@@ -30,6 +30,10 @@ For a conditioning set `Phi` and candidate `i`:
 
 The implementation also records `signed_total_error`, numerically checking the identity `u_i + r_i = <K_i,L>_F`.
 
+The exact-kernel projector uses a rank-revealing SVD with relative
+`rank_tol=1e-10`. Aggregation treats a context as numerically zero-strength
+when `U_i + R_i <= 1e-12`.
+
 ## Generated files
 
 `experiments/run_all.py` produces:

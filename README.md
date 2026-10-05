@@ -62,7 +62,9 @@ This artifact contains no author names, institutional affiliations, personal rep
 
 The theoretical score `s_i(Phi)` is undefined when `U_i + R_i = 0`. For permutation aggregation only, the manuscript defines an extended score `tilde{s}_i(Phi)=0` in that uninformative case. The implementation follows this convention using `strength_tol` to identify numerical zero.
 
-For exact duplicate/near-collinear kernels, rank is determined by SVD with relative tolerance `rank_tol`.
+For exact duplicate/near-collinear kernels, rank is determined by SVD with
+relative tolerance `rank_tol`. The reference default is `1e-10`, matching the
+manuscript. Numerical zero-strength contexts use `strength_tol=1e-12`.
 
 ## Reproducibility map
 
