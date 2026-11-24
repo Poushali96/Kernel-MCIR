@@ -1,0 +1,51 @@
+seed 0 done
+seed 1 done
+seed 2 done
+seed 3 done
+seed 4 done
+seed 5 done
+seed 6 done
+seed 7 done
+seed 8 done
+seed 9 done
+seed 10 done
+seed 11 done
+seed 12 done
+seed 13 done
+seed 14 done
+seed 15 done
+seed 16 done
+seed 17 done
+seed 18 done
+seed 19 done
+~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+~/opt/anaconda3/lib/python3.9/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+                                  AD_s     AD_U       CE      dil
+kind       k sigma    mode                                       
+copies     1 0.00e+00 block   1.93e-03 2.38e-03 1.85e-03 4.94e-01
+                      coupled 6.99e-17 8.22e-17 5.04e-15 5.02e-01
+                      uniform 8.16e-03 9.86e-03 2.77e-02 5.16e-01
+           2 0.00e+00 block   2.08e-03 2.55e-03 2.10e-03 3.29e-01
+                      coupled 3.46e-16 3.13e-15 4.46e-15 3.26e-01
+                      uniform 1.28e-02 1.57e-02 4.17e-02 3.50e-01
+           3 0.00e+00 block   1.82e-03 2.18e-03 1.60e-03 2.45e-01
+                      coupled 3.59e-16 3.15e-15 5.43e-15 2.41e-01
+                      uniform 1.53e-02 1.88e-02 4.96e-02 2.60e-01
+           5 0.00e+00 block   1.97e-03 2.35e-03 1.63e-03 1.64e-01
+                      coupled 3.73e-16 3.17e-15 1.15e-14 1.62e-01
+                      uniform 1.82e-02 2.21e-02 5.93e-02 1.73e-01
+irrelevant 3 0.00e+00 block   3.52e-03 4.31e-03 2.26e-03 1.00e+00
+                      uniform 3.52e-03 4.31e-03 2.26e-03 1.00e+00
+noisy      2 5.00e-02 block   2.35e-03 2.81e-03 2.88e-02 3.38e-01
+                      coupled 1.35e-03 1.70e-03 2.90e-02 3.35e-01
+                      uniform 1.28e-02 1.58e-02 7.07e-02 3.59e-01
+             1.00e-01 block   2.37e-03 2.83e-03 6.20e-02 3.59e-01
+                      coupled 1.40e-03 1.77e-03 6.20e-02 3.56e-01
+                      uniform 1.25e-02 1.53e-02 1.04e-01 3.79e-01
+             2.00e-01 block   1.13e-02 1.38e-02 1.86e-01 4.59e-01
+                      coupled 1.51e-03 1.91e-03 1.47e-01 4.38e-01
+                      uniform 1.13e-02 1.38e-02 1.86e-01 4.59e-01
+rescale    0 3.00e+00 block   2.14e-03 2.63e-03 2.27e-03 1.00e+00
+                      uniform 2.14e-03 2.63e-03 2.27e-03 1.00e+00

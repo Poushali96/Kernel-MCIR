@@ -1,0 +1,27 @@
+seed 0 done -> saved dil_lr500.json
+seed 1 done -> saved dil_lr500.json
+seed 2 done -> saved dil_lr500.json
+seed 3 done -> saved dil_lr500.json
+seed 4 done -> saved dil_lr500.json
+seed 5 done -> saved dil_lr500.json
+seed 6 done -> saved dil_lr500.json
+seed 7 done -> saved dil_lr500.json
+seed 8 done -> saved dil_lr500.json
+seed 9 done -> saved dil_lr500.json
+
+=== 20NG duplicate dilution | screen=lr500 | seeds=10 | B=200 | n_eval=500 ===
+setting  k   p     method        dilution (post/pre)    AUROC(dup-detect)   theory 1/(k+1)
+fixed    1  0.0   CKA           1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   HSIC          1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   KMCIR_U       0.552 ± 0.015       1.000 ± 0.000      0.500
+fixed    1  0.0   KMCIR_s       0.553 ± 0.015       1.000 ± 0.000      0.500
+fixed    1  0.0   PermImp       1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   s_orig pre->post: 0.702 -> 0.381
+retrain  1  0.0   CKA           1.044 ± 0.039       0.303 ± 0.151      0.500
+retrain  1  0.0   HSIC          1.044 ± 0.037       0.302 ± 0.149      0.500
+retrain  1  0.0   KMCIR_U       0.581 ± 0.032       0.991 ± 0.009      0.500
+retrain  1  0.0   KMCIR_s       0.557 ± 0.018       0.999 ± 0.002      0.500
+retrain  1  0.0   PermImp       0.458 ± 0.048       0.874 ± 0.026      0.500
+retrain  1  0.0   s_orig pre->post: 0.702 -> 0.384
+raw rows -> dil_lr500.json
+EXIT 0

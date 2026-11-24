@@ -1,0 +1,27 @@
+seed 0 done -> saved dil_df200.json
+seed 1 done -> saved dil_df200.json
+seed 2 done -> saved dil_df200.json
+seed 3 done -> saved dil_df200.json
+seed 4 done -> saved dil_df200.json
+seed 5 done -> saved dil_df200.json
+seed 6 done -> saved dil_df200.json
+seed 7 done -> saved dil_df200.json
+seed 8 done -> saved dil_df200.json
+seed 9 done -> saved dil_df200.json
+
+=== 20NG duplicate dilution | screen=df200 | seeds=10 | B=200 | n_eval=500 ===
+setting  k   p     method        dilution (post/pre)    AUROC(dup-detect)   theory 1/(k+1)
+fixed    1  0.0   CKA           1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   HSIC          1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   KMCIR_U       0.541 ± 0.014       1.000 ± 0.000      0.500
+fixed    1  0.0   KMCIR_s       0.541 ± 0.015       1.000 ± 0.001      0.500
+fixed    1  0.0   PermImp       1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   s_orig pre->post: 0.687 -> 0.362
+retrain  1  0.0   CKA           1.055 ± 0.044       0.326 ± 0.152      0.500
+retrain  1  0.0   HSIC          1.028 ± 0.095       0.326 ± 0.152      0.500
+retrain  1  0.0   KMCIR_U       0.574 ± 0.058       0.959 ± 0.038      0.500
+retrain  1  0.0   KMCIR_s       0.557 ± 0.023       0.989 ± 0.017      0.500
+retrain  1  0.0   PermImp       0.528 ± 0.052       0.867 ± 0.050      0.500
+retrain  1  0.0   s_orig pre->post: 0.687 -> 0.369
+raw rows -> dil_df200.json
+EXIT 0

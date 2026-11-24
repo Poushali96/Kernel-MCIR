@@ -1,0 +1,19 @@
+\begin{table}[htbp]\centering\scriptsize
+\caption{\rev{Cross-check of the population references in Table~\ref{tab:dep_sweep} against the authors' implementations, for $X_2$: DFI from \texttt{fdfi} 0.1.0 (Gaussian optimal-transport explainer) and the DIP decomposition from \texttt{dipd} 0.0.3 (\texttt{get\_loo}, EBM learner), 3 seeds, $n=3000$ (DIP: 70/30 train/test split; DFI: $2\times10^4$ background points). Entries: ours / official. $^\ddagger$At $\rho=1$ the covariance is singular and DFI is undefined; our value is the limit $\rho\to1$ of Proposition~\ref{prop:nonequiv}(a), while \texttt{fdfi} regularises the whitening map.}}\label{tab:official}
+\begin{tabular}{lc|cccc}\toprule
+Regime & $\rho$ & DFI$_2$ & DIP stand.$_2$ & DIP dep.$_2$ & LOCO$_2$ (DIP) \\\midrule
+duplicate & 1.00 & 0.50 / 0.25$^\ddagger$ & 0.99 / 1.00 & 0.99 / 1.00 & 0.00 / 0.00 \\
+proxy & 0.60 & 0.18 / 0.18 & 0.36 / 0.36 & 0.36 / 0.36 & 0.00 / 0.00 \\
+proxy & 0.90 & 0.40 / 0.40 & 0.81 / 0.81 & 0.81 / 0.81 & 0.00 / 0.00 \\
+proxy & 0.99 & 0.49 / 0.48 & 0.97 / 0.98 & 0.97 / 0.98 & 0.00 / 0.00 \\
+suppressor & 0.60 & 0.50 / 0.51 & 0.20 / 0.20 & -0.59 / -0.61 & 0.80 / 0.80 \\
+suppressor & 0.90 & 0.50 / 0.51 & 0.05 / 0.05 & -0.89 / -0.90 & 0.95 / 0.95 \\
+suppressor & 0.99 & 0.50 / 0.51 & 0.01 / 0.01 & -0.98 / -0.97 & 0.99 / 0.98 \\
+distinct roles & 0.60 & 0.81 / 0.81 & 0.81 / 0.80 & 0.12 / 0.09 & 0.69 / 0.71 \\
+distinct roles & 0.90 & 0.79 / 0.78 & 0.90 / 0.88 & 0.62 / 0.60 & 0.27 / 0.28 \\
+distinct roles & 0.99 & 0.77 / 0.76 & 0.97 / 0.98 & 0.94 / 0.95 & 0.03 / 0.03 \\
+interaction & 0.60 & 0.87 / 0.85 & 0.53 / 0.53 & 0.29 / 0.28 & 0.47 / 0.47 \\
+interaction & 0.90 & 0.78 / 0.76 & 0.90 / 0.89 & 0.80 / 0.80 & 0.10 / 0.10 \\
+interaction & 0.99 & 0.75 / 0.74 & 0.97 / 0.99 & 0.96 / 0.98 & 0.01 / 0.01 \\
+\bottomrule\end{tabular}\end{table}
+% max / mean absolute difference: dfi 0.015/0.010, stand 0.020/0.009, dep 0.028/0.012, loco 0.017/0.004

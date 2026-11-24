@@ -1,0 +1,68 @@
+seed 0: n=7532, d=200, models trained (41s); streaming meta-Gram
+   rows 24/7532  0s elapsed, ~118s left
+   rows 1224/7532  34s elapsed, ~175s left
+   rows 2424/7532  65s elapsed, ~136s left
+   rows 3624/7532  96s elapsed, ~104s left
+   rows 4824/7532  129s elapsed, ~73s left
+   rows 6024/7532  160s elapsed, ~40s left
+   rows 7224/7532  193s elapsed, ~8s left
+seed 0 done in 352s -> saved dil_fulln.json
+seed 1: n=7532, d=200, models trained (53s); streaming meta-Gram
+   rows 24/7532  1s elapsed, ~212s left
+   rows 1224/7532  33s elapsed, ~171s left
+   rows 2424/7532  65s elapsed, ~137s left
+   rows 3624/7532  103s elapsed, ~111s left
+   rows 4824/7532  140s elapsed, ~79s left
+   rows 6024/7532  179s elapsed, ~45s left
+   rows 7224/7532  218s elapsed, ~9s left
+seed 1 done in 354s -> saved dil_fulln.json
+seed 2: n=7532, d=200, models trained (28s); streaming meta-Gram
+   rows 24/7532  0s elapsed, ~140s left
+   rows 1224/7532  18s elapsed, ~90s left
+   rows 2424/7532  34s elapsed, ~72s left
+   rows 3624/7532  51s elapsed, ~55s left
+   rows 4824/7532  67s elapsed, ~38s left
+   rows 6024/7532  84s elapsed, ~21s left
+   rows 7224/7532  101s elapsed, ~4s left
+seed 2 done in 215s -> saved dil_fulln.json
+
+=== 20NG duplicate dilution | screen=lr200 | n_eval=ALL | seeds=3 | B=200 | n_eval=7532 ===
+setting  k   p     method        dilution (post/pre)    AUROC(dup-detect)   theory 1/(k+1)
+fixed    1  0.0   CKA           1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   HSIC          1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   KMCIR_U       0.517 ± 0.006       1.000 ± 0.000      0.500
+fixed    1  0.0   KMCIR_s       0.517 ± 0.006       1.000 ± 0.000      0.500
+fixed    1  0.0   PermImp       1.000 ± 0.000       0.500 ± 0.000      0.500
+fixed    1  0.0   s_orig pre->post: 0.875 -> 0.453
+fixed    2  0.0   CKA           1.000 ± 0.000       0.500 ± 0.000      0.333
+fixed    2  0.0   HSIC          1.000 ± 0.000       0.500 ± 0.000      0.333
+fixed    2  0.0   KMCIR_U       0.358 ± 0.012       1.000 ± 0.000      0.333
+fixed    2  0.0   KMCIR_s       0.358 ± 0.012       1.000 ± 0.000      0.333
+fixed    2  0.0   PermImp       1.000 ± 0.000       0.500 ± 0.000      0.333
+fixed    2  0.0   s_orig pre->post: 0.875 -> 0.313
+fixed    3  0.0   CKA           1.000 ± 0.000       0.500 ± 0.000      0.250
+fixed    3  0.0   HSIC          1.000 ± 0.000       0.500 ± 0.000      0.250
+fixed    3  0.0   KMCIR_U       0.270 ± 0.010       1.000 ± 0.000      0.250
+fixed    3  0.0   KMCIR_s       0.270 ± 0.010       1.000 ± 0.000      0.250
+fixed    3  0.0   PermImp       1.000 ± 0.000       0.500 ± 0.000      0.250
+fixed    3  0.0   s_orig pre->post: 0.875 -> 0.236
+retrain  1  0.0   CKA           1.075 ± 0.017       0.072 ± 0.061      0.500
+retrain  1  0.0   HSIC          1.143 ± 0.069       0.072 ± 0.061      0.500
+retrain  1  0.0   KMCIR_U       0.597 ± 0.035       0.982 ± 0.019      0.500
+retrain  1  0.0   KMCIR_s       0.522 ± 0.006       1.000 ± 0.000      0.500
+retrain  1  0.0   PermImp       0.451 ± 0.022       0.970 ± 0.023      0.500
+retrain  1  0.0   s_orig pre->post: 0.875 -> 0.456
+retrain  2  0.0   CKA           1.076 ± 0.005       0.103 ± 0.032      0.333
+retrain  2  0.0   HSIC          1.096 ± 0.009       0.103 ± 0.032      0.333
+retrain  2  0.0   KMCIR_U       0.396 ± 0.012       1.000 ± 0.000      0.333
+retrain  2  0.0   KMCIR_s       0.360 ± 0.012       1.000 ± 0.000      0.333
+retrain  2  0.0   PermImp       0.252 ± 0.010       0.999 ± 0.001      0.333
+retrain  2  0.0   s_orig pre->post: 0.875 -> 0.314
+retrain  3  0.0   CKA           1.076 ± 0.010       0.113 ± 0.039      0.250
+retrain  3  0.0   HSIC          1.093 ± 0.006       0.113 ± 0.039      0.250
+retrain  3  0.0   KMCIR_U       0.297 ± 0.009       1.000 ± 0.000      0.250
+retrain  3  0.0   KMCIR_s       0.271 ± 0.010       1.000 ± 0.000      0.250
+retrain  3  0.0   PermImp       0.174 ± 0.006       1.000 ± 0.000      0.250
+retrain  3  0.0   s_orig pre->post: 0.875 -> 0.236
+raw rows -> dil_fulln.json
+EXIT 0

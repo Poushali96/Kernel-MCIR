@@ -1,0 +1,23 @@
+seed 0 done (MLP acc 0.531)
+seed 1 done (MLP acc 0.534)
+seed 2 done (MLP acc 0.530)
+seed 3 done (MLP acc 0.530)
+seed 4 done (MLP acc 0.526)
+seed 5 done (MLP acc 0.530)
+seed 6 done (MLP acc 0.533)
+seed 7 done (MLP acc 0.529)
+seed 8 done (MLP acc 0.532)
+seed 9 done (MLP acc 0.535)
+                             del_auc        runtime        spearman         top30       
+                                mean    std    mean    std     mean    std   mean    std
+method                                                                                  
+Permutation                    0.199  0.019   1.355  0.191    0.742  0.042  0.570  0.066
+CKA                            0.204  0.019   0.782  0.135    0.865  0.021  0.607  0.060
+K-MCIR $a=\bar U/\max\bar T$   0.211  0.020   2.932  0.195    1.000  0.000  1.000  0.000
+HSIC                           0.215  0.020   0.767  0.137    0.985  0.002  0.933  0.038
+K-MCIR $\bar s$                0.218  0.022   2.932  0.195    0.548  0.056  0.230  0.053
+K-MCIR $\bar R$                0.239  0.022   2.932  0.195    0.859  0.016  0.700  0.070
+Mutual info                    0.253  0.024   1.644  0.228    0.471  0.038  0.527  0.060
+Random                         0.305  0.029   0.000  0.000   -0.024  0.056  0.133  0.052
+MLP test accuracy: 0.531 +- 0.003
+EXIT 0

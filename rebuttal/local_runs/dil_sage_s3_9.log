@@ -1,0 +1,18 @@
+seed 3 done -> saved dil_sage_s3_9.json
+seed 4 done -> saved dil_sage_s3_9.json
+seed 5 done -> saved dil_sage_s3_9.json
+seed 6 done -> saved dil_sage_s3_9.json
+seed 7 done -> saved dil_sage_s3_9.json
+seed 8 done -> saved dil_sage_s3_9.json
+seed 9 done -> saved dil_sage_s3_9.json
+
+=== 20NG duplicate dilution | screen=lr200 | seeds=7 | B=200 | n_eval=500 ===
+setting  k   p     method        dilution (post/pre)    AUROC(dup-detect)   theory 1/(k+1)
+retrain  1  0.0   CKA           1.077 ± 0.017       0.235 ± 0.125      0.500
+retrain  1  0.0   HSIC          1.067 ± 0.068       0.240 ± 0.134      0.500
+retrain  1  0.0   KMCIR_U       0.582 ± 0.036       0.974 ± 0.042      0.500
+retrain  1  0.0   KMCIR_s       0.544 ± 0.013       0.999 ± 0.003      0.500
+retrain  1  0.0   PermImp       0.476 ± 0.048       0.913 ± 0.051      0.500
+retrain  1  0.0   SAGE          0.526 ± 0.050       0.911 ± 0.036      0.500
+retrain  1  0.0   s_orig pre->post: 0.779 -> 0.420
+raw rows -> dil_sage_s3_9.json

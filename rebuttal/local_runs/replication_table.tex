@@ -1,0 +1,15 @@
+\begin{table}[htbp]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{\rev{Representation-perturbation benchmark (means over 20 seeds, $n=400$, $B=1500$). AD: attribution drift of $\bar s$ over the unaffected features $X_1,\dots,X_5$; CE: group conservation error of $\bar U$ for $X_0$ and its copies; dil.: $\bar U_0^{\mathrm{post}}/\bar U_0^{\mathrm{pre}}$ (theory under block orders $1/(k+1)$, in expectation). Uniform and block orders are sampled independently before and after the perturbation, so rescaling and irrelevant features show the Monte Carlo floor; coupled block orders derive each post-perturbation order from a pre-perturbation order (Proposition~\ref{prop:replication}), so for exact copies AD and CE vanish to floating-point precision. Noisy copies are not replicas: with $\sigma\le0.1$ they are still grouped (CKA $\ge0.95$) and the results measure empirical stability; with $\sigma=0.2$ they are not grouped by the CKA rule (the coupled column groups them by construction).}}\label{tab:replication}
+\begin{tabular}{lc|ccc|ccc|cc}\toprule
+ & & \multicolumn{3}{c|}{uniform (paper)} & \multicolumn{3}{c|}{block} & \multicolumn{2}{c}{coupled block} \\
+Perturbation & $k$ & AD & CE & dil. & AD & CE & dil. & AD & CE \\\midrule
+exact copies & 1 & $0.008$ & $0.028$ & $0.516$ & $0.002$ & $0.002$ & $0.494$ & $<10^{-16}$ & $<10^{-14}$ \\
+exact copies & 2 & $0.013$ & $0.042$ & $0.350$ & $0.002$ & $0.002$ & $0.329$ & $<10^{-15}$ & $<10^{-14}$ \\
+exact copies & 3 & $0.015$ & $0.050$ & $0.260$ & $0.002$ & $0.002$ & $0.245$ & $<10^{-15}$ & $<10^{-14}$ \\
+exact copies & 5 & $0.018$ & $0.059$ & $0.173$ & $0.002$ & $0.002$ & $0.164$ & $<10^{-15}$ & $<10^{-13}$ \\
+noisy, $\sigma{=}0.05$ & 2 & $0.013$ & $0.071$ & $0.359$ & $0.002$ & $0.029$ & $0.338$ & $0.001$ & $0.029$ \\
+noisy, $\sigma{=}0.1$ & 2 & $0.012$ & $0.104$ & $0.379$ & $0.002$ & $0.062$ & $0.359$ & $0.001$ & $0.062$ \\
+noisy, $\sigma{=}0.2$ & 2 & $0.011$ & $0.186$ & $0.459$ & $0.011$ & $0.186$ & $0.459$ & $0.002$ & $0.147$ \\
+irrelevant & 3 & $0.004$ & $0.002$ & $1.000$ & $0.004$ & $0.002$ & $1.000$ & -- & -- \\
+rescale $\times3$ & -- & $0.002$ & $0.002$ & $1.000$ & $0.002$ & $0.002$ & $1.000$ & -- & -- \\
+\bottomrule\end{tabular}\end{table}

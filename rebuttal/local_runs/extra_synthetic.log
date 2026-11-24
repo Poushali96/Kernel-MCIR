@@ -1,0 +1,20 @@
+seed 0 done
+seed 1 done
+seed 2 done
+seed 3 done
+seed 4 done
+
+=== synthetic duplicate test (n=300, B=200, 5 seeds): dilution of the ORIGINAL, post/pre ===
+   dil_U         dil_E        dil_seqG        dil_pdCov        dil_HSIC     
+    mean    std   mean    std     mean    std      mean    std     mean  std
+k                                                                           
+1  0.524  0.019  0.524  0.019    0.767  0.078     0.728  0.033      1.0  0.0
+2  0.340  0.045  0.340  0.044    0.574  0.070     0.519  0.041      1.0  0.0
+3  0.270  0.027  0.271  0.027    0.479  0.025     0.393  0.042      1.0  0.0
+
+mean rank per feature, k=1 (features: X0 generator, X1 generator, X2 weak generator, X3 noise, X4 = copy of X0)
+  s         ranks [4.0, 1.0, 2.0, 3.0, 5.0]   values [0.522, 0.96, 0.931, 0.78, 0.476]
+  seqRatio  ranks [1.2, 3.0, 4.0, 5.0, 1.8]   values [0.325, -0.162, -0.991, -6.638, 0.293]
+  Eshare    ranks [1.0, 3.0, 4.0, 5.0, 2.0]   values [0.482, 0.059, 0.018, 0.001, 0.44]
+  U         ranks [1.0, 3.0, 4.0, 5.0, 2.0]   values [1528.63, 723.729, 398.341, 87.818, 1390.168]
+  pdCov     ranks [1.5, 3.8, 3.2, 5.0, 1.5]   values [0.063, 0.031, 0.033, 0.002, 0.063]

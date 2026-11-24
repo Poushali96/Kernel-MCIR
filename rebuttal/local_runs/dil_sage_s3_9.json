@@ -1,0 +1,443 @@
+[
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.5929126497457146,
+  "auroc": 0.9936842105263158
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5410320467829307,
+  "auroc": 1.0
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.091235871631739,
+  "auroc": 0.06157894736842105
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.0833300588236088,
+  "auroc": 0.06157894736842105
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.5294543748357002,
+  "auroc": 0.8678947368421053
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.5493331476678922,
+  "auroc": 0.8989473684210527
+ },
+ {
+  "seed": 3,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.4355593381858817,
+  "auroc": 0.8109616109045714
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.5469624989352844,
+  "auroc": 0.9705263157894737
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5543623121718868,
+  "auroc": 0.9984210526315789
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 0.9802467849971052,
+  "auroc": 0.49736842105263157
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.0755390805857756,
+  "auroc": 0.47368421052631576
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.4987203247594321,
+  "auroc": 0.9431578947368422
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.4186848949951452,
+  "auroc": 0.9689473684210527
+ },
+ {
+  "seed": 4,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.4057815564374058,
+  "auroc": 0.7352819472557269
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.5439348938663338,
+  "auroc": 0.993157894736842
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5213258574950919,
+  "auroc": 1.0
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.0371818398796815,
+  "auroc": 0.3252631578947368
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.0976336164467102,
+  "auroc": 0.31473684210526315
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.5264486221594237,
+  "auroc": 0.9205263157894736
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.5483917609176754,
+  "auroc": 0.915263157894737
+ },
+ {
+  "seed": 5,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.4328580992667952,
+  "auroc": 0.8347306401798006
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.605193279488606,
+  "auroc": 0.9905263157894737
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5674666076178856,
+  "auroc": 1.0
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.0670088572405574,
+  "auroc": 0.1231578947368421
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.057858408254225,
+  "auroc": 0.1231578947368421
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.4231787398802537,
+  "auroc": 0.9178947368421053
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.535737911529229,
+  "auroc": 0.9273684210526315
+ },
+ {
+  "seed": 6,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.4257562824102579,
+  "auroc": 0.766658382575294
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.5624111765581622,
+  "auroc": 1.0
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5445606903461876,
+  "auroc": 1.0
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.0329308685305947,
+  "auroc": 0.25789473684210523
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.0658464895896071,
+  "auroc": 0.24526315789473682
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.5105593014440669,
+  "auroc": 0.9463157894736842
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.5804725103910718,
+  "auroc": 0.9026315789473683
+ },
+ {
+  "seed": 7,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.41547753874130516,
+  "auroc": 0.7668574820112302
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.5676797603065976,
+  "auroc": 0.9984210526315789
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5442512733629921,
+  "auroc": 1.0
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.042329517650137,
+  "auroc": 0.25473684210526315
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.0535341413741044,
+  "auroc": 0.25473684210526315
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.40173783684407216,
+  "auroc": 0.9810526315789474
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.4965540251597842,
+  "auroc": 0.921578947368421
+ },
+ {
+  "seed": 8,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.4352528273995834,
+  "auroc": 0.8027427424458684
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_U",
+  "dilution": 0.6528333845737371,
+  "auroc": 0.8736842105263158
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "KMCIR_s",
+  "dilution": 0.5347185371838218,
+  "auroc": 0.9921052631578948
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "HSIC",
+  "dilution": 1.2146147472256184,
+  "auroc": 0.1568421052631579
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "CKA",
+  "dilution": 1.1018679699102016,
+  "auroc": 0.17473684210526316
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "PermImp",
+  "dilution": 0.44474543711884096,
+  "auroc": 0.8142105263157895
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "SAGE",
+  "dilution": 0.5530727315576872,
+  "auroc": 0.8410526315789474
+ },
+ {
+  "seed": 9,
+  "k": 1,
+  "p": 0.0,
+  "setting": "retrain",
+  "method": "_s_orig_pre_post",
+  "dilution": 0.38882140698127954,
+  "auroc": 0.7345427995602642
+ }
+]

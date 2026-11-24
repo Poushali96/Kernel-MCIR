@@ -1,0 +1,25 @@
+seed 0 done in 43s
+seed 1 done in 51s
+seed 2 done in 34s
+seed 3 done in 22s
+seed 4 done in 20s
+
+=== 20NG (LR-200, n_eval=500, B=200, 5 seeds) ===
+                        mean    std
+spearman_s_seqRatio    0.162  0.068
+spearman_s_Eshare      0.631  0.063
+n_s_defined          189.600  3.130
+spearman_U_seqG        0.560  0.021
+spearman_U_E           0.846  0.031
+spearman_U_pdCov       0.977  0.007
+dil_U                  0.578  0.039
+auroc_U                0.983  0.019
+dil_E                  0.666  0.090
+auroc_E                0.867  0.084
+dil_seqG               0.949  0.133
+auroc_seqG             0.457  0.088
+dil_pdCov              0.697  0.137
+auroc_pdCov            0.792  0.113
+dil_HSIC               1.075  0.076
+auroc_HSIC             0.250  0.173
+EXIT 0
